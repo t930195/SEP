@@ -71,7 +71,7 @@ public class AddOrEditActivity extends AppCompatActivity {
         categoryViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
         Intent intent = getIntent();
         mode = intent.getStringExtra("mode");
-        inButton = findViewById(R.id.inButton);
+        inButton = findViewById(R.id.outButton);
         outButton = findViewById(R.id.outButton);
         inButtonLine = findViewById(R.id.inButtonLine);
         outButtonLine = findViewById(R.id.outButtonLine);
