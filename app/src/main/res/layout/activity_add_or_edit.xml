@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/my_actionBar"
+        layout="@layout/my_actionbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/inButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="收入"
+        android:textColor="@color/deepGray"
+        app:rippleColor="@color/lightGray"
+        app:backgroundTint="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="@+id/outButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outButton"
+        app:strokeColor="@color/midGray"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/inButtonLine"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:rippleColor="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="@+id/inButton"
+        app:layout_constraintEnd_toEndOf="@+id/inButton"
+        app:layout_constraintStart_toStartOf="@+id/inButton"
+        app:layout_constraintTop_toTopOf="@+id/inButton"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/outButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="支出"
+        android:textColor="@color/deepGray"
+        app:rippleColor="@color/lightGray"
+        app:backgroundTint="@color/lightGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toBottomOf="@id/my_actionBar"
+        app:strokeColor="@color/midGray"
+        app:strokeWidth="1dp" />
+    <Button
+        android:id="@+id/outButtonLine"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:rippleColor="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="@+id/outButton"
+        app:layout_constraintEnd_toEndOf="@+id/outButton"
+        app:layout_constraintStart_toStartOf="@+id/outButton"
+        app:layout_constraintTop_toTopOf="@+id/outButton"
+        app:strokeColor="@color/red"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="日期"
+        app:layout_constraintBottom_toBottomOf="@+id/timePickButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timePickButton" />
+
+    <Button
+        android:id="@+id/datePickButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="right|center_vertical"
+        android:onClick="datePicker"
+        android:text="2022-01-10"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/timePickButton"
+        app:layout_constraintEnd_toStartOf="@+id/timePickButton"
+        app:layout_constraintTop_toTopOf="@+id/timePickButton" />
+
+    <Button
+        android:id="@+id/timePickButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="right|center_vertical"
+        android:onClick="timePicker"
+        android:text="下午 04:37"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outButton" />
+
+    <TextView
+        android:id="@+id/assetText"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:autoSizeTextType="uniform"
+        android:text="資產"
+        app:layout_constraintBottom_toBottomOf="@+id/assetPicker"
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/assetPicker" />
+
+    <Spinner
+        android:id="@+id/assetPicker"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/timePickButton"
+        app:layout_constraintTop_toBottomOf="@+id/timePickButton" />
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:autoSizeTextType="uniform"
+        android:text="金額"
+        app:layout_constraintBottom_toBottomOf="@+id/amountEditor"
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/amountEditor" />
+
+    <EditText
+        android:id="@+id/amountEditor"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/timePickButton"
+        app:layout_constraintTop_toBottomOf="@+id/categoryPicker" />
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:autoSizeTextType="uniform"
+        android:text="類別"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryPicker"
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/categoryPicker" />
+
+    <Spinner
+        android:id="@+id/categoryPicker"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="@+id/timePickButton"
+        app:layout_constraintTop_toBottomOf="@+id/assetPicker" />
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:autoSizeTextType="uniform"
+        android:text="內容"
+        app:layout_constraintBottom_toBottomOf="@+id/noteEditor"
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/noteEditor" />
+
+    <EditText
+        android:id="@+id/noteEditor"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/timePickButton"
+        app:layout_constraintTop_toBottomOf="@+id/amountEditor" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="新增"
+        app:backgroundTint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditor" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="儲存"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline30"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditor" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="刪除"
+        android:textColor="@color/black"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        app:icon="@drawable/delete_outline"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/saveButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/saveButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

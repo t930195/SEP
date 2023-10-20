@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">記帳小助手</string>
+    <string name="round">圓餅圖</string>
+    <string name="bar">長條圖</string>
+    <string-array name="property_array">
+        <item>所有資產</item>
+        <item>信用卡</item>
+        <item>現金</item>
+        <item>linepay</item>
+    </string-array>
+    <string name="google">連結Google</string>
+    <string name="notice">提醒</string>
+    <string name="remind">提醒</string>
+    <string name="desktool">桌面小工具</string>
+    <string name="property">資產</string>
+    <string name="hand_backup">手動備份</string>
+    <string name="auto_backup">自動備份</string>
+    <string name="edit_category">編輯類別</string>
+    <string name="speak">語音</string>
+    <string name="notice_capture">通知擷取</string>
+    <string name="last">last</string>
+    <string name="appwidget_text">桌面小工具</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="appwidget_edittext">This is an app widget description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

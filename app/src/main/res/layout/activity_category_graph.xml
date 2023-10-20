@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/categoryIncomeBarChart"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/categoryIncomePieChart"
+            android:layout_width="190dp"
+            android:layout_height="190dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryIncomeRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline20">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/categoryExpenseBarChart"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/categoryExpensePieChart"
+            android:layout_width="190dp"
+            android:layout_height="190dp"></com.github.mikephil.charting.charts.PieChart>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryExpenseRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/monthEditTextView"
+        android:layout_width="112dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:text="XX月"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/categoryChartToggleButton"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ToggleButton
+        android:id="@+id/categoryChartToggleButton"
+        android:layout_width="95dp"
+        android:layout_height="51dp"
+        android:textColor="#455A64"
+        android:textOff="@string/round"
+        android:textOn="@string/bar"
+        app:layout_constraintBottom_toBottomOf="@+id/monthEditTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/monthEditTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25304136" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

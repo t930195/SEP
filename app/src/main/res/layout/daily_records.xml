@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/midGray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="?android:attr/textColor"
+            android:gravity="center"
+            android:text="12"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dayOfTheWeek"
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:background="@drawable/round"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="星期五"
+            android:textSize="10dp" />
+        <TextView
+            android:id="@+id/yearAndMonth"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:textColor="@color/deepGray"
+            android:gravity="center"
+            android:text="2022.12"
+            android:textSize="10dp"/>
+        <TextView
+            android:id="@+id/dailyInAmount"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="$5000"/>
+        <TextView
+            android:id="@+id/dailyOutAmount"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/red"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="$3000"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/midGray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/internalRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</LinearLayout>
